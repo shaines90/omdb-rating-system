@@ -1,16 +1,60 @@
 body {
-  font-family: 'Avenir', Helvetica
+  font-family: 'Avenir', Helvetica;
 }
 
 h1 {
   font-size: 35px;
-  padding: 25px 45px;
+  padding-left: 30px;
+  padding-top: 25px;
   text-decoration: underline;
   color: rgb(100,100,100);
 }
 
-p {
-  font: 18px;
-  padding: 25px;
-  color: rgb(255,255,255);
+h2 {
+  font-size: 30px;
+  padding-left: 30px;
+  padding-top: 25px;
+  padding-bottom: 0px;
+  font-style: italic;
+  color: rgb(75,75,75);
 }
+
+h3 {
+  padding-left: 28px;
+  padding-top: 0px;
+  color: rgb(231,156,60)
+}
+
+h4 {
+  padding-left: 28px;
+}
+
+p {
+  font: 24px;
+  padding-left: 30px;
+  color: rgb(0,0,0);
+  line-height: 25px;
+}
+
+.movieColumns {
+  float: left;
+}
+
+ul {
+  list-style: none;
+  padding-left: 50px;
+  line-height: 30px;
+}
+
+li {
+  list-style: none;
+  padding-left: 30px;
+}
+
+#searchField {
+  margin-left: 25px;
+}
+
+}
+
+

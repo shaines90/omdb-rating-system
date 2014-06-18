@@ -1,24 +1,41 @@
 $ ->
 
-  masterResponse = $.ajax(
-    "http://www.omdbapi.com/?s=Matrix"
-    dataType: "json"
-  )
+  $('#search').on 'submit', (e) ->
+    searchTerm = $('#searchField').val()
 
-  masterResponse.done (data) ->
-    movies = data.Search
-    for movie in movies
-      imdb = movie.imdbID
-      li = "<li><a href='#' data-imdbid='#{imdb}'>#{movie.Title}</a></li>"
-      console.log li
-      $('.movies').append(li)
-    $('a').click (e) ->
-      imdbID = $(@).data('imdbid')
+    masterResponse = $.ajax(
+      "http://www.omdbapi.com/?s=#{searchTerm}"
+      dataType: "json"
+    )
 
-      detailResponse = $.ajax(
-        "http://www.omdbapi.com/?i=#{imdbID}&plot=full"
-        dataType: "json"
+    masterResponse.done (data) ->
+
+      movies = data.Search
+
+      for movie in movies
+        imdb = movie.imdbID
+        detail = $.ajax(
+            "http://www.omdbapi.com/?i=#{imdb}"
+            dataType: 'json'
         )
 
-      detailResponse.done (data) ->
-        console.log data
+        detail.done (movie) ->
+          rating = movie.imdbRating
+          rating = parseFloat(movie.imdbRating)
+
+          if rating <= 2
+            $('.nope').append("<li>#{movie.Title}</li>")
+          else if rating <= 4
+            $('.meh').append("<li>#{movie.Title}</li>")
+          else if rating <= 6
+            $('.ok').append("<li>#{movie.Title}</li>")
+          else if rating <= 8
+            $('.veryGood').append("<li>#{movie.Title}</li>")
+          else
+            $('.fantastic').append("<li>#{movie.Title}</li>")
+
+            # $('.detail .title').html(movie.Title)
+            # $('.detail .rating').html(movie.imdbRating)
+
+  # $('#reset').click ->
+  #   $('.movies').html("")
