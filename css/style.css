@@ -1,0 +1,16 @@
+body {
+  font-family: 'Avenir', Helvetica
+}
+
+h1 {
+  font-size: 35px;
+  padding: 25px 45px;
+  text-decoration: underline;
+  color: rgb(100,100,100);
+}
+
+p {
+  font: 18px;
+  padding: 25px;
+  color: rgb(255,255,255);
+}
