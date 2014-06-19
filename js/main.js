@@ -23,15 +23,15 @@
             rating = movie.imdbRating;
             rating = parseFloat(movie.imdbRating);
             if (rating <= 2) {
-              return $('.nope').append("<li>" + movie.Title + "</li>");
+              return $('.nope').append("<li><a href='#'>" + movie.Title + "</a></li>");
             } else if (rating <= 4) {
-              return $('.meh').append("<li>" + movie.Title + "</li>");
+              return $('.meh').append("<li><a href='#'>" + movie.Title + "</a></li>");
             } else if (rating <= 6) {
-              return $('.ok').append("<li>" + movie.Title + "</li>");
+              return $('.ok').append("<li><a href='#'>" + movie.Title + "</a></li>");
             } else if (rating <= 8) {
-              return $('.veryGood').append("<li>" + movie.Title + "</li>");
+              return $('.veryGood').append("<li><a href='#'>" + movie.Title + "</a></li>");
             } else {
-              return $('.fantastic').append("<li>" + movie.Title + "</li>");
+              return $('.fantastic').append("<li><a href='#'>" + movie.Title + "</a></li>");
             }
           }));
         }

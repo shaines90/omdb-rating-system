@@ -24,15 +24,22 @@ $ ->
           rating = parseFloat(movie.imdbRating)
 
           if rating <= 2
-            $('.nope').append("<li>#{movie.Title}</li>")
+            $('.nope').append("<li><a href='#'>#{movie.Title}</a></li>")
           else if rating <= 4
-            $('.meh').append("<li>#{movie.Title}</li>")
+            $('.meh').append("<li><a href='#'>#{movie.Title}</a></li>")
           else if rating <= 6
-            $('.ok').append("<li>#{movie.Title}</li>")
+            $('.ok').append("<li><a href='#'>#{movie.Title}</a></li>")
           else if rating <= 8
-            $('.veryGood').append("<li>#{movie.Title}</li>")
+            $('.veryGood').append("<li><a href='#'>#{movie.Title}</a></li>")
           else
-            $('.fantastic').append("<li>#{movie.Title}</li>")
+            $('.fantastic').append("<li><a href='#'>#{movie.Title}</a></li>")
+
+        # poster = "<img src='#{movie.Poster}'>"
+
+        # $('.detail .title').html(movie.Title)
+        # $('.detail .poster').html(poster)
+        # $('.detail .year').html(movie.Year)
+
 
   $('#reset').click ->
     $('.movieColumns li').html("")
