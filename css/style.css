@@ -7,6 +7,7 @@ body {
   background: -ms-linear-gradient(top,  rgba(100,100,100,0.48) 0%,rgba(62,62,62,0) 38%,rgba(0,0,0,0) 100%); /* IE10+ */
   background: linear-gradient(to bottom,  rgba(100,100,100,0.48) 0%,rgba(62,62,62,0) 38%,rgba(0,0,0,0) 100%); /* W3C */
   background-repeat: no-repeat;
+  background-color: rgb(225,225,225);
 }
 
 h1 {
@@ -65,6 +66,7 @@ ul {
 li {
   list-style: none;
   padding-left: 30px;
+  line-height: 32px;
 }
 
 #searchField {
@@ -114,6 +116,10 @@ button:hover {
 button:active {
   position:relative;
   top:1px;
+}
+
+hr {
+  width: 100%;
 }
 
 
