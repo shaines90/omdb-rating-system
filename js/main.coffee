@@ -34,8 +34,5 @@ $ ->
           else
             $('.fantastic').append("<li>#{movie.Title}</li>")
 
-            # $('.detail .title').html(movie.Title)
-            # $('.detail .rating').html(movie.imdbRating)
-
-  # $('#reset').click ->
-  #   $('.movies').html("")
+  $('#reset').click ->
+    $('.movieColumns li').html("")
