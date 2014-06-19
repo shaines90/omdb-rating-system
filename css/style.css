@@ -53,8 +53,13 @@ li {
 
 #searchField {
   margin-left: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
 }
 
+/*button {
+  margin-left: 25px;
 }
 
-
+*/

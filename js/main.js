@@ -3,6 +3,7 @@
   $(function() {
     return $('#search').on('submit', function(e) {
       var masterResponse, searchTerm;
+      e.preventDefault();
       searchTerm = $('#searchField').val();
       masterResponse = $.ajax("http://www.omdbapi.com/?s=" + searchTerm, {
         dataType: "json"
